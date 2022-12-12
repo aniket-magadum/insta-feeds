@@ -4,7 +4,7 @@ namespace AniketMagadum\InstaFeeds\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Http;
+use Http;
 use AniketMagadum\InstaFeeds\Exceptions\InstagramAccessTokenNotSet;
 
 class FetchInstaFeeds extends Command
@@ -19,7 +19,7 @@ class FetchInstaFeeds extends Command
     {
         $medias = $this::fetchAndCacheMedias();
 
-        $this->info("Insta feed has cached ".$medias->count()." medias");
+        $this->output->success("Insta feed has cached ".$medias->count()." medias");
     }
 
     public static function fetchAndCacheMedias()

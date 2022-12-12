@@ -3,6 +3,7 @@
 namespace AniketMagadum\InstaFeeds;
 
 use AniketMagadum\InstaFeeds\Commands\FetchInstaFeeds;
+use AniketMagadum\InstaFeeds\Commands\RefreshInstaFeedsToken;
 use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
@@ -12,7 +13,8 @@ class ServiceProvider extends AddonServiceProvider
     ];
 
     protected $commands = [
-        FetchInstaFeeds::class
+        FetchInstaFeeds::class,
+        RefreshInstaFeedsToken::class
     ];
 
     public function register()
