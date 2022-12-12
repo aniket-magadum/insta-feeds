@@ -1,0 +1,19 @@
+{
+    "name": "aniket-magadum/insta-feeds",
+    "autoload": {
+        "psr-4": {
+            "AniketMagadum\\InstaFeeds\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Insta Feeds",
+            "description": "Insta Feeds addon"
+        },
+        "laravel": {
+            "providers": [
+                "AniketMagadum\\InstaFeeds\\ServiceProvider"
+            ]
+        }
+    }
+}
