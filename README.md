@@ -52,7 +52,7 @@ You can setup a schedular is not already running by [Following the Laravel Docum
 
 In order to render the feeds on the frontend we can make use of the {{ insta_feed }} tag . Here is an example snipped which you can use.
 
-```antlers
+```html
 {{ insta_feed limit="8"}}
   <div class="mx-auto" style="margin-top: 30px;border: 2px solid black;">
      <img src="{{media_url}}" alt="{{caption}}" style="height: 300px ;width: 300px;">
