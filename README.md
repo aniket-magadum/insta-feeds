@@ -50,7 +50,7 @@ You can setup a schedular is not already running by [Following the Laravel Docum
 
 ### Rendering the feeds
 
-In order to render the feeds on the frontend we can make use of the {{ insta_feed }} tag . Here is an example snipped which you can use.
+In order to render the feeds on the frontend we can make use of the ```{{ insta_feed }}``` tag . Here is an example snipped which you can use.
 
 ```html
 {{ insta_feed limit="8"}}
