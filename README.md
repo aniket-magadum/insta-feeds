@@ -23,4 +23,52 @@ composer require aniket-magadum/insta-feeds
 
 Once the extension is installed we have to setup the ```INSTA_FEEDS_ACCESS_TOKEN``` and ```INSTA_FEEDS_CLIENT_SECRET``` in your .env file.
 
+```bash
+INSTA_FEEDS_ACCESS_TOKEN=ACCESS_TOKEN_HERE
+INSTA_FEEDS_CLIENT_SECRET=CLIENT_SECRET_HERE
+```
+
+In order to generate these tokens you can visit this [Get Started Guide for Instagram Basic Display API](https://developers.facebook.com/docs/instagram-basic-display-api/getting-started)
+
+On the same page you have to create a long lived access token as below 
+
+<img width="993" alt="image" src="https://user-images.githubusercontent.com/48653948/207324017-66f5a955-d5dc-4d50-aa6d-3a2a239c1085.png">
+
+Once you click on generate token button it will ask your instagram details and once done you will receive this access token.
+
+<img width="727" alt="image" src="https://user-images.githubusercontent.com/48653948/207324126-2d94115e-d3c1-4f71-9f68-ca18ac37ed06.png">
+
+### Schedular
+
+This addon requires the schedular to be running as it performs the following tasks to be run in the background.
+
+- Caching of instagram posts for faster retrieval.
+- Refreshing of the access token periodically so that we dont need to put in any manual efforts.
+
+You can setup a schedular is not already running by [Following the Laravel Documenation](https://laravel.com/docs/9.x/scheduling#running-the-scheduler)
+
+
+### Rendering the feeds
+
+In order to render the feeds on the frontend we can make use of the {{ insta_feed }} tag . Here is an example snipped which you can use.
+
+```twig
+{{ insta_feed limit="8"}}
+  <div class="mx-auto" style="margin-top: 30px;border: 2px solid black;">
+     <img src="{{media_url}}" alt="{{caption}}" style="height: 300px ;width: 300px;">
+     <p class="text-center"> {{ caption ?? 'No Caption Needed' }}</p>
+  </div>
+{{ /insta_feed }}
+```
+
+
+
+
+
+
+
+
+
+
+
 
