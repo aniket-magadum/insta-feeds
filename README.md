@@ -55,7 +55,7 @@ In order to render the feeds on the frontend we can make use of the {{ insta_fee
 ```html
 {{ insta_feed limit="8"}}
   <div class="mx-auto" style="margin-top: 30px;border: 2px solid black;">
-     <img src="{{media_url}}" alt="{{caption}}" style="height: 300px ;width: 300px;">
+     <img src="{{ media_url }}" alt="{{ caption }}" style="height: 300px ;width: 300px;">
      <p class="text-center"> {{ caption ?? 'No Caption Needed' }}</p>
   </div>
 {{ /insta_feed }}
