@@ -47,6 +47,12 @@ This addon requires the schedular to be running as it performs the following tas
 
 You can setup a schedular is not already running by [Following the Laravel Documenation](https://laravel.com/docs/9.x/scheduling#running-the-scheduler)
 
+As of now, 
+
+- Posts are cached every hour. 
+- Token is refreshed every month.
+
+If you wish to customize these values please let me know. But believe me the defaults are the best.
 
 ### Rendering the feeds
 
