@@ -26,4 +26,10 @@ class ServiceProvider extends AddonServiceProvider
     {
         
     }
+
+    public function schedule(\Illuminate\Console\Scheduling\Schedule $schedule)
+    {
+        $schedule->command('insta-feeds:fetch')->hourly();
+        $schedule->command('insta-feeds:refresh-token')->monthly();
+    }
 }
