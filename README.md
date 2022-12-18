@@ -56,15 +56,17 @@ If you wish to customize these values please let me know. But believe me the def
 
 ### Rendering the feeds
 
-In order to render the feeds on the frontend we can make use of the ```{{ insta_feed }}``` tag . Here is an example snipped which you can use.
+In order to render the feeds on the frontend we can make use of the ```{{ insta_feed }}``` tag . Here is an example snipped which you can use. We have also added a {{ nocache tag }} as it will prevent frontend caching of the page and make this template dynamic.
 
 ```html
-{{ insta_feed limit="8"}}
-  <div class="mx-auto" style="margin-top: 30px;border: 2px solid black;">
-     <img src="{{ media_url }}" alt="{{ caption }}" style="height: 300px ;width: 300px;">
-     <p class="text-center"> {{ caption ?? 'No Caption Needed' }}</p>
-  </div>
-{{ /insta_feed }}
+{{ nocache }} 
+  {{ insta_feed limit="8"}}
+    <div class="mx-auto" style="margin-top: 30px;border: 2px solid black;">
+       <img src="{{ media_url }}" alt="{{ caption }}" style="height: 300px ;width: 300px;">
+       <p class="text-center"> {{ caption ?? 'No Caption Needed' }}</p>
+    </div>
+  {{ /insta_feed }}
+{{ /nocache }}
 ```
 
 
