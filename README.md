@@ -1,6 +1,6 @@
 # Insta Feeds
 
-> Display Instagram Posts on your website with ease. 
+> Display Instagram Posts on your website with ease. Use Coupon Code `FIRST10` for 50% discount for first 10 users only.
 
 This addon make's use of the [Instagram Page Display API](https://developers.facebook.com/docs/instagram-basic-display-api/) for fetching data via Instagram. 
 
