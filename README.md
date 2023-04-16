@@ -19,6 +19,8 @@ You can search for this addon in the `Tools > Addons` section of the Statamic co
 composer require aniket-magadum/insta-feeds
 ```
 
+> Remember! This is a paid addon so purchase a license before using it. 
+
 ## How to Use
 
 Once the extension is installed we have to setup the ```INSTA_FEEDS_ACCESS_TOKEN``` and ```INSTA_FEEDS_CLIENT_SECRET``` in your .env file.
