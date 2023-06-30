@@ -40,7 +40,7 @@ class FetchInstaFeeds extends Command
         }
 
         $medias = collect(Http::get("https://graph.instagram.com/me/media?fields=
-                id,username,media_type,caption,permalink,thumbmail_url,timestamp,media_url&access_token=" . $access_token)
+                id,username,media_type,caption,permalink,thumbnail_url,timestamp,media_url&access_token=" . $access_token)
             ->json()['data']);
 
         $medias = $medias->filter(
